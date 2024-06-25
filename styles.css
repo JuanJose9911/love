@@ -4,21 +4,57 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow: auto; /* Permite el desplazamiento si es necesario, pero oculta la barra de desplazamiento */
 }
+
+body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit como Chrome y Safari */
+}
+/* Estilos sections*/
+.section {
+    text-align: center;
+    height: 100vh;
+    padding: 10px 50px 0 50px;
+    position: relative;
+}
+
+.button{
+    display: none;
+    background: none;
+    border: 0;
+}
+
 .header {
     text-align: center;
-    padding: 50px;
 }
-.header h1 {
+
+.index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
     font-family: 'Dancing Script', cursive;
-    font-size: 40px;
     color: #FF6F61;
 }
-.header p {
-    font-size: 20px;
-    color: #FFFFFF;
+
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1080px) {
+    /* Styles for small screens */
+    .index{
+        font-size: 2rem;
+    }
+
+    .button{
+        position: absolute;
+        top: -5rem;
+        right: 1rem;
+        display: block;
+    }
+
+    .button2{
+        right: 18rem;
+    }
 }
-.section {
-    padding: 100px;
-    text-align: center;
-}
+
