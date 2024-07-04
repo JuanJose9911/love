@@ -34,7 +34,38 @@ body::-webkit-scrollbar {
     align-items: center;
     font-size: 80px;
     font-family: 'Dancing Script', cursive;
+    color: #FFFFFF;
+}
+
+.photo-frame {
+    display: inline-block;
+    border: 10px solid #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 20px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.photo-frame::before {
+    content: "❤️";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
     color: #FF6F61;
+}
+.photo-frame img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+.photo-frame-small img{
+    max-width: 100%;
+
+    width: 100%;
+    margin: 35px 0 0 0;
+    border: solid 7px #828282;
+    border-radius: 10px;
 }
 
 
@@ -55,6 +86,10 @@ body::-webkit-scrollbar {
 
     .button2{
         right: 18rem;
+    }
+
+    .parrafo{
+        font-size: 1.1rem;
     }
 }
 
