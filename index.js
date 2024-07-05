@@ -50,3 +50,18 @@ buttons.forEach(function(button) {
     button.addEventListener('click', scrollOnClick);
 });
 
+let buttons2 = document.querySelectorAll('.button2');
+
+function scrollOnClick2(event){
+    currentSectionIndex--
+    currentSectionIndex = Math.max(0, Math.min(currentSectionIndex, sections.length - 1));
+    window.scrollTo({
+        top: sections[currentSectionIndex].offsetTop,
+        behavior: 'smooth'
+    });
+    event.preventDefault();
+}
+buttons2.forEach(function(button) {
+    button.addEventListener('click', scrollOnClick2);
+});
+
