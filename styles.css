@@ -122,6 +122,11 @@ body::-webkit-scrollbar {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+.styled-list li:hover {
+    background-color: #f90009;
+    color: #FFFFFF;
+}
+
 
 /*RESPONSIVE*/
 
